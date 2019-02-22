@@ -1,0 +1,13 @@
+---
+applications:
+- name: tcptest
+  buildpacks:
+  - python_buildpack
+  command: python hello.py
+  health-check-type: process
+  instances: 1
+  no-route: true
+  stack: cflinuxfs3
+  env:
+    testhosts: COMMA_SEPARATED_HOSTNAMES
+    testports: COMMA_SEPARaTED_PORTNUMBERS
